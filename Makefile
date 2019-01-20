@@ -10,7 +10,7 @@ test:
 	PYTHONPATH=. py.test
 
 docker_build:
-	docker build -t hello_world_printer .
+	docker build -t hello-world-printer .
 
 docker_run: docker_build
       docker run \
