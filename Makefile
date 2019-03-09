@@ -11,6 +11,8 @@ lint:
 
 test:
 	PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml --junit-xml=test_result.xml
+	PYTHONPATH=. test_cov
+	PYTHONPATH=. text_xunit
 
 docker_build:
 	docker build -t $(MY_DOCKER_NAME) .
