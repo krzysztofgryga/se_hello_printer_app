@@ -10,7 +10,7 @@ lint:
 	flake8 hello_world test
 
 test:
-	PYTHONPATH=. py.test
+	PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml --junit-xml=test_result.xml
 
 docker_build:
 	docker build -t $(MY_DOCKER_NAME) .
