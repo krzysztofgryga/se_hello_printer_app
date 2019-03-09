@@ -11,6 +11,6 @@ script:
   -  make docker_build
   -  make docker_push
 deploy:
-provider:heroku
-app: desolate-tor-28258
-api_key:${HEROKU_API_KEY}
+  -  provider:heroku
+  -  app: desolate-tor-28258
+  -  api_key:${HEROKU_API_KEY}
