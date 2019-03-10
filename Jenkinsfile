@@ -10,7 +10,7 @@ pipeline {
 	      steps{
 		    sh 'make test_xunit || true'
 		    step([$class: 'XUnitBuilder',
-			tresholds:[
+			thresholds:[
 				[$class: 'SkippedThreshold', failureThreshold: '0'],
 				[$class: 'FailedThreshold',  failureThreshold: '1'],
 			tool: [[$class: 'JUniType', pattern: 'test_result.xml']]])
