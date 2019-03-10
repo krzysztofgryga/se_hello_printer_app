@@ -11,7 +11,7 @@ pipeline {
 		    sh 'make test'
                    }
         }
-	stege('Lint'){
+	stage('Lint'){
 		steps{
 		   sh 'lint'
 		     }
