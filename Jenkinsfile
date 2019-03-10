@@ -9,7 +9,11 @@ pipeline {
 	stage('Test'){
 	      steps{
 		    sh 'make test'
-                	}
+                   }
         }
+	stege('Lint'){
+		steps{
+		   sh 'lint'
+		     }
     }
 }
