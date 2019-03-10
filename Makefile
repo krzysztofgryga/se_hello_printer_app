@@ -14,6 +14,8 @@ test:
 
 test_cov:
 	PYTHONPATH=. py.test --verbose -s --cov=.
+run:
+	python main.py
 
 docker_build:
 	docker build -t $(MY_DOCKER_NAME) .
